@@ -1,4 +1,4 @@
-# Parameterization of a 3D manned Submersible
+# Parameterization of a 3D Manned Submersible
 
 ![](images/unmanned.jpg)
 
