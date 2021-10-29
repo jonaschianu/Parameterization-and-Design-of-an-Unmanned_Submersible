@@ -10,20 +10,20 @@ function Design_code(depth,Occupants,Material)
         return
     end
 
-    %DESIGN CALCULATIONS done here. Feel free to use as many subfunctions as necessary.
+    %DESIGN CALCULATIONS done here.
     
     gravity= 9.81; %Units (m/s^2)
     
     [density_metal, yield_metal]=get_Metal_properties(Material); %A call to a subfunction to calculate the density and yield strength of selected metal
     
-    density_water=1029; %Units (kg/m^3). The desity of sea water G. Elert, ìDensity of Seawater,î Density of Seawater - The Physics Factbook. [Online]. Available: https://hypertextbook.com/facts/2002/EdwardLaValley.shtml. [Accessed: 09-Nov-2019].
+    density_water=1029; %Units (kg/m^3). The desity of sea water G. Elert, ‚ÄúDensity of Seawater,‚Äù Density of Seawater - The Physics Factbook. [Online]. Available: https://hypertextbook.com/facts/2002/EdwardLaValley.shtml. [Accessed: 09-Nov-2019].
     
     %Pressure Values
     inner_pressure= 101325; %Units (Pa). It is equal to atmospheric pressure
     outer_pressure=density_water*gravity*depth+inner_pressure; %Units (Pa)
     
     %Hull Properties
-    density_acryllic=1180; %Units (kg/m^3). The extruded Acrylic density Density of Selected Solids,î Engineering ToolBox. [Online]. Available: https://www.engineeringtoolbox.com/density-solids-d_1265.html. [Accessed: 18-Nov-2019]
+    density_acryllic=1180; %Units (kg/m^3). The extruded Acrylic density Density of Selected Solids,‚Äù Engineering ToolBox. [Online]. Available: https://www.engineeringtoolbox.com/density-solids-d_1265.html. [Accessed: 18-Nov-2019]
     strength_acryllic = 70e+06; %Units (Pa). Acrylic yield stress, Engineering Toolbox. [Online]. Available: https://www.engineeringtoolbox.com/young-modulus-d_417.html. [Accessed Oct. 9th,2019]
     
     inner_diameter = calc_inner_diameter(Occupants); %Units (m). A call to a subfunction to choose inner diameter
